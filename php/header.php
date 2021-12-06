@@ -1,5 +1,5 @@
 
-<header>
+<header id="header">
     <nav class="navbar">
         <a href="index.php" class="navbar-brand">
             <h3 class="navbar-text">Epic Switch Shop</h3>
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav"> <!-- Cart -->
                 <a href="cart.php" class="nav-item nav-link active">
-                    <h3 class="navbar-text">Cart
+                    <h3 class="navbar-cart">Koszyk:
                       <?php
 
                         if (isset($_SESSION['cart'])){

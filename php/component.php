@@ -17,7 +17,7 @@ function component($productname, $productprice, $productimg, $productid, $produc
                                 <span class=\"price\">$productprice USD</span>
                             </h5>
                             <br>
-                            <button type=\"submit\" class=\"button\" name=\"add\">DODAJ DO KOSZYKA <i class=\"fas fa-shopping-cart\"></i></button>
+                            <button type=\"submit\" class=\"button\" name=\"add\">DODAJ <i class=\"fas fa-shopping-cart\"></i></button>
                              <input type='hidden' name='product_id' value='$productid'>
                         </div>
                     </div>
