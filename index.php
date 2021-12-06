@@ -67,7 +67,7 @@ if (isset($_POST['add'])){
                     else {
                       $counter=$counter+1;
                     }
-                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id'], $row['product_description'], $row['product_category'], $row['product_amount']);
+                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id'], $row['product_category']);
                 }
             ?>
   </div>

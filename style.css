@@ -12,7 +12,7 @@ a{
 }
 
 .button {
-  background-color: #ffc107;
+  background-color: #ffd451;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -68,7 +68,7 @@ header{
   margin-bottom: 35px;
   margin-top: 5px;
   background-color: background: linear-gradient(90deg, rgba(108,114,203,1) 0%, rgba(203,105,193,1) 100%);;
-  border: 1px solid #CB69C1;
+  border: 1px solid #d587cd;
 }
 
 .navbar-text{

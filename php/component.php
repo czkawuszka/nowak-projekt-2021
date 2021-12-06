@@ -1,6 +1,6 @@
 <?php
 
-function component($productname, $productprice, $productimg, $productid, $productdescription, $productcategory, $productamount){
+function component($productname, $productprice, $productimg, $productid, $productcategory){
     $element = "
 
     <div class=\"item-box\">
@@ -11,11 +11,6 @@ function component($productname, $productprice, $productimg, $productid, $produc
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$productname</h5>
-
-
-                            <p class=\"card-text\">$productamount pieces</p>
-                            <p class=\"card-text\">$productdescription</p>
-                            <p class=\"card-text\">$productcategory</p>
 
                             <br>
                             <h5>
@@ -32,7 +27,7 @@ function component($productname, $productprice, $productimg, $productid, $produc
     echo $element;
 }
 
-function cartElement($productname, $productprice, $productimg, $productid, $productdescription, $productcategory, $productamount){
+function cartElement($productname, $productprice, $productimg, $productid, $productcategory){
     $element = "
 
     <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items\">
@@ -45,9 +40,6 @@ function cartElement($productname, $productprice, $productimg, $productid, $prod
 
           <div class=\"text-productb\">
 
-              <h5 class=\"pt-2\">$productname Switch / $productamount pieces</h5>
-              <small class=\"text-secondary\">$productdescription</small>
-              <br>
               <small class=\"text-secondary\">$productcategory</small>
 
               <div class=\"amount\">
@@ -63,5 +55,5 @@ function cartElement($productname, $productprice, $productimg, $productid, $prod
     </form>
 
     ";
-    echo  $element;
+    echo $element;
 }
