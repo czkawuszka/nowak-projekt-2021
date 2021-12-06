@@ -60,9 +60,9 @@ if (isset($_POST['add'])){
                 $result = $database->getData();
                 while ($row = mysqli_fetch_assoc($result)){
 
-                    if ($counter==3) {
+                    if ($counter==4) {
                       echo ("<br>");
-                      $counter=0;
+                      $counter=1;
                     }
                     else {
                       $counter=$counter+1;
