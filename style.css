@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
 
+/*
+yellow: #ffff93
+yellow-dim: #eff0b6
+purple: #9393ff
+white: #fffff
+*/
+
 *{
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -52,6 +59,8 @@ a{
   text-align: center;
   padding-top:15px;
   padding-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .item-box{
@@ -82,4 +91,86 @@ body {
 
 footer{
   font-size: 10 px;
+}
+
+@keyframes background_colour {
+    0% {
+        background-color: #eff0b6;
+        color: #763857;
+    }
+    50% {
+        background-color: #ffff93;
+        color: #b16088;
+    }
+    100% {
+        background-color: #eff0b6;
+        color: #763857;
+    }
+}
+
+header{
+  animation: background_colour 15s infinite ease-in-out;
+}
+
+.pimg
+{
+  width: 175px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#top{
+  width: 10%;
+  border: 1px solid;
+  display: inline-block;
+}
+
+.witampananowaka{
+  width: 100%;
+  margin-top: 75px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.Removebt {
+  background-color: #f47174;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 3px;
+  height: 21px;
+}
+
+.pt-2{
+  font-size: 21px;
+}
+
+small{
+  font-size: 14px;
+}
+
+.row{
+  border-style: none;
+  border-width: 2px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding: 15px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.calculations{
+  width: 45%;
+  display:inline-block;
+  float: left;
+}
+
+.shopping-cart{
+  width: 55%;
+  display:inline-block;
+  text-align: left;
+  float: left;
 }
