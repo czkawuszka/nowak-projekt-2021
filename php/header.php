@@ -6,7 +6,7 @@
         </a>
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav"> <!-- Cart -->
                 <a href="cart.php" class="nav-item nav-link active">
                     <h3 class="navbar-text">Cart
                       <?php

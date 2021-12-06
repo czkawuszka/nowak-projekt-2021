@@ -30,6 +30,134 @@ if (isset($_POST['remove'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Epic Switch Shop - Cart</title>
     <link rel="icon" href="icon.jpg">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
+
+      /*
+      yellow: #ffff93
+      yellow-dim: #eff0b6
+      purple: #9393ff
+      white: #fffff
+      */
+
+
+      *{
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+      }
+      a{
+        color: inherit;
+        text-decoration: inherit;
+      }
+      body {
+          background-color: #ffffff;
+          color: #b16088;
+      }
+
+      .navbar{
+        position:relative;
+        display:-ms-flexbox;
+        display:flex;
+        -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+        -ms-flex-align:center;
+        align-items:center;
+        -ms-flex-pack:justify;
+        justify-content:space-between;
+        padding:.5rem 1rem
+      }
+
+      @keyframes background_colour {
+          0% {
+              background-color: #eff0b6;
+              color: #763857;
+          }
+          50% {
+              background-color: #ffff93;
+              color: #b16088;
+          }
+          100% {
+              background-color: #eff0b6;
+              color: #763857;
+          }
+      }
+
+      header{
+        animation: background_colour 15s infinite ease-in-out;
+      }
+
+      .navbar-text{
+        font-size: 29px;
+      }
+
+      .container{
+        padding-top:15px;
+        padding-bottom: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 15px;
+      }
+      .shopping-cart{
+        width: 55%;
+        display:inline-block;
+        text-align: left;
+        float: left;
+      }
+      .calculations{
+        width: 45%;
+        display:inline-block;
+        float: left;
+      }
+
+      .row{
+        border-style: none;
+        border-width: 2px;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        padding: 15px;
+        margin-right: 40px;
+        margin-left: 40px;
+      }
+      small{
+        font-size: 14px;
+      }
+
+      .pt-2{
+        font-size: 21px;
+      }
+
+      .Removebt {
+        background-color: #f47174;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 3px;
+        height: 21px;
+      }
+
+      .witampananowaka{
+        width: 100%;
+        margin-top: 75px;
+        text-align: center;
+        font-size: 28px;
+      }
+
+      #top{
+        width: 10%;
+        border: 1px solid;
+        display: inline-block;
+      }
+
+      .pimg
+      {
+        width: 175px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+    </style>
 </head>
 <body>
 
