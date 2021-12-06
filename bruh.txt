@@ -1,0 +1,24 @@
+<div class="calculations">
+  <h6>Price</h6>
+  <hr>
+  <div class="row">
+      <div class="col-md-6">
+          <?php
+              if (isset($_SESSION['cast'])){
+                  $count  = count($_SESSION['cart']);
+                  echo "<h6>Price ($count )</h6>";
+              }else{
+                  echo "<h6>Price</h6>";
+              }
+          ?>
+          <hr>
+          <h6>Do zapłaty</h6>
+      </div>
+      <div class="col-md-6">
+          <h6><?php echo $total; ?> PLN</h6>
+          <hr>
+          <h6><?php
+              echo $total;
+              ?> PLN</h6>
+      </div>
+    </div>
