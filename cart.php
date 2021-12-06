@@ -179,7 +179,7 @@ if (isset($_POST['remove'])){
           while ($row = mysqli_fetch_assoc($result)){
               foreach ($product_id as $id){
                   if ($row['id'] == $id){
-                      cartElement($row['product_name'], $row['product_price'], $row['product_image'], $row['id'], $row['product_description'], $row['product_category'], $row['product_amount']);
+                      cartElement($row['product_name'], $row['product_price'], $row['product_image'], $row['id'], $row['product_category']);
                       $total = $total + (int)$row['product_price'];
                   }
               }
