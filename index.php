@@ -191,10 +191,9 @@ if (isset($_POST['add'])){
                 $counter=0;
                 $result = $database->getData();
                 while ($row = mysqli_fetch_assoc($result)){
-
-                    if ($counter==3) { //change this to change the number of items in a row
+                    if ($counter==4) {
                       echo ("<br>");
-                      $counter=0;
+                      $counter=1;
                     }
                     else {
                       $counter=$counter+1;
