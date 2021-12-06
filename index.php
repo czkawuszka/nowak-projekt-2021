@@ -54,6 +54,9 @@ if (isset($_POST['add'])){
 </head>
 <body>
   <?php require_once ("php/header.php"); ?>
+  <div class="main-txt">
+  	<h1><center>Switches</center></h1>
+  </div>
   <div class="container">
             <?php
                 $counter=0;
@@ -72,7 +75,7 @@ if (isset($_POST['add'])){
             ?>
   </div>
   <footer>
-    <p>Creators: Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
+    <p><p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
   </footer>
 </body>
 </html>

@@ -12,7 +12,7 @@ a{
 }
 
 .button {
-  background-color: #ffd451;
+  background-color: #ffc107;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -53,6 +53,13 @@ header{
   padding: .5rem 1rem
 }
 
+.main-txt{
+  padding-top: 110px;
+  height: 100px;
+  font-size: 40px;
+  padding-bottom: 60px;
+}
+
 .container{
   width: 100%;
   text-align: center;
@@ -68,7 +75,7 @@ header{
   margin-bottom: 35px;
   margin-top: 5px;
   background-color: background: linear-gradient(90deg, rgba(108,114,203,1) 0%, rgba(203,105,193,1) 100%);;
-  border: 1px solid #d587cd;
+  border: 1px solid #CB69C1;
 }
 
 .navbar-text{
@@ -80,11 +87,11 @@ img{
   padding-bottom: 15px;
 }
 
-body {
-  background-color: #ffffff;
-  color: #b16088;
-}
-
 footer{
   font-size: 10 px;
+  height: 70px;
+  text-align: center;
+  justify-content: center;
+  color: grey;
+  margin-top: 35px;
 }
