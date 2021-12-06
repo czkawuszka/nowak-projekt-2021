@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
+
+*{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.button {
+  background-color: #9393ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.card-title{
+  font-size:24px;
+}
+
+.price{
+  font-size:24px;
+}
+
+.item-box{
+  display: inline-block;
+}
+
+.navbar{
+  position:relative;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  -ms-flex-align:center;
+  align-items:center;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+  padding:.5rem 1rem
+}
+
+.container{
+  width:100%;
+  text-align: center;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
+.item-box{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  border-radius: 0.25rem;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.navbar-text{
+  font-size: 29px;
+}
+
+img{
+  width: 230px;
+  padding-bottom: 15px;
+}
+
+body {
+  background-color: #ffffff;
+  color: #b16088;
+}
+
+footer{
+  font-size: 10 px;
+}
