@@ -46,6 +46,9 @@ if (isset($_POST['add'])){
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping</title>
     <link rel="icon" href="icon.jpg">
@@ -56,7 +59,6 @@ if (isset($_POST['add'])){
   <div class="main-txt">
   	<h1><center>Switches</center></h1>
   	<h6><center>Wybierz coś dla siebie</center></h6>
-    <hr class="divider">
   </div>
   <div class="container">
             <?php
@@ -76,7 +78,7 @@ if (isset($_POST['add'])){
             ?>
   </div>
   <footer>
-    <p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
+    <p><p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
   </footer>
 </body>
 </html>
