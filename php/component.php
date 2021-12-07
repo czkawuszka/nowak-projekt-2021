@@ -46,7 +46,7 @@ function cartElement($productname, $productprice, $productimg, $productid, $prod
                 <input type=\"text\" value=\"1\" class=\"amountform\">
               </div>
 
-              <h5 class=\"pt-2\">$productprice PLN</h5>
+              <h5 class=\"pt-2\">$$productprice</h5>
               <button type=\"submit\" class=\"Removebt\" name=\"remove\">Remove</button>
           </div>
 

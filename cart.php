@@ -27,7 +27,7 @@ if (isset($_POST['remove'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Epic Switch Shop - Cart</title>
     <link rel="icon" href="icon.jpg">
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="style-cart.css">
 </head>
 <body>
 <?php
@@ -55,7 +55,7 @@ if (isset($_POST['remove'])){
     ?>
   </div>
   <div class="balans">
-    <h1> siema</h1>
+    <h1>siema</h1>
   </div>
 </div>
 </body>
