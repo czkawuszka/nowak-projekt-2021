@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 *{
   margin: 0;
@@ -6,8 +6,10 @@
   color: #EEEDF0;
   background-color: #17181F;
 }
+
 a{
-  
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .button {
@@ -45,12 +47,6 @@ a{
   font-weight: 10;
 }
 
-.item-box{
-  display: inline-block;
-}
-
-
-
 .navbar{
   position: relative;
   display: flex;
@@ -67,14 +63,12 @@ a{
 }
 
 .main-txt h1{
-  font-family: 'Readex Pro', sans-serif;
   font-size: 120px;
   margin-bottom: 30px;
 }
 
 .main-txt h6{
   font-weight: 10;
-  font-family: 'Readex Pro', sans-serif;
   font-size: 20px;
   padding-bottom: 60px;
 }
@@ -87,6 +81,7 @@ a{
 }
 
 .item-box{
+  display: inline-block;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 0.25rem;
@@ -121,10 +116,90 @@ img{
 }
 
 footer{
-  font-size: 10 px;
+  font-size: 10px;
   height: 70px;
   text-align: center;
   justify-content: center;
   color: grey;
   margin-top: 35px;
+}
+
+.shopping-cart{
+  width: 55%;
+  display:inline-block;
+  text-align: left;
+  float: left;
+}
+
+.calculations{
+  width: 45%;
+  display:inline-block;
+  float: left;
+}
+
+.row{
+  border-radius: 0.25rem;
+  margin-bottom: 5px;
+  border: 1px solid white;
+  width: 175px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+small{
+  font-size: 14px;
+}
+
+.pt-2{
+  font-size: 21px;
+}
+
+.Removebt {
+  background-color: #f47174;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 3px;
+  height: 21px;
+  margin-top: 10px;
+}
+
+.pimg{
+  width: 175px;
+  border-radius: 0.25rem;
+  margin-bottom: 10px;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.balans{
+  display: inline-block;
+  width: 60%;
+}
+
+.item_row{
+  display: inline-block;
+  width: 60%;
+}
+
+.amoountform{
+  width: 100px;
+}
+
+.divider{
+  border: 2px solid #EEEDF0;
+  border-radius: 2px;
+  width: 6%;
+  margin: 0 47% 0 47%;
 }
