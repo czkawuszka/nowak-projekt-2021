@@ -1,0 +1,3 @@
+Importuj w gotowej bazie (productdb) danych tabele logowania
+odpal w localhoscie "signup.php"
+utworz urzytkownika nastepnie sie zaloguj

@@ -27,15 +27,12 @@ if (isset($_POST['remove'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Epic Switch Shop - Cart</title>
     <link rel="icon" href="icon.jpg">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
 <?php
     require_once ('php/header.php');
 ?>
-<div class="main-txt">
-  <h1><center>Cart</center></h1>
-  <hr class="divider">
 </div>
 <div class="wrapper">
   <div class="item_row">
@@ -61,8 +58,5 @@ if (isset($_POST['remove'])){
     <h1> siema</h1>
   </div>
 </div>
-<footer>
-  <p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
-</footer>
 </body>
 </html>
