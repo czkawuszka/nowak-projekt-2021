@@ -11,10 +11,10 @@ class CreateDb
         public $con;
 
 
-        // class constructor
+        // konstruktor
     public function __construct(
         $dbname = "Newdb",
-        $tablename = "Productdb",
+        $tablename = "Items",
         $servername = "localhost",
         $username = "root",
         $password = ""
@@ -26,31 +26,28 @@ class CreateDb
       $this->username = $username;
       $this->password = $password;
 
-      // create connection
+      // connect
         $this->con = mysqli_connect($servername, $username, $password);
 
-        // Check connection
+        // sprawdz czy dziala polaczenie
         if (!$this->con){
             die("Connection failed : " . mysqli_connect_error());
         }
 
-        // query
+        // robisz tu databaze
         $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
-        // execute query
         if(mysqli_query($this->con, $sql)){
 
             $this->con = mysqli_connect($servername, $username, $password, $dbname);
 
-            // sql to create new table
+            // robisz tu tabele
             $sql = " CREATE TABLE IF NOT EXISTS $tablename
                             (id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                             product_name VARCHAR (64) NOT NULL,
-                             product_category VARCHAR (32) NOT NULL,
-                             product_description VARCHAR (64) NOT NULL,
-                             product_amount VARCHAR (2) NOT NULL,
-                             product_price FLOAT,
-                             product_image VARCHAR (255)
+                             name VARCHAR (256) NOT NULL,
+                             id_categories VARCHAR (32) NOT NULL,
+                             price FLOAT,
+                             image_path VARCHAR (1024)
                             );";
 
             if (!mysqli_query($this->con, $sql)){
@@ -62,9 +59,19 @@ class CreateDb
         }
     }
 
-    // get product from the database
+    // wez rzecz z databazy
     public function getData(){
         $sql = "SELECT * FROM $this->tablename";
+
+        $result = mysqli_query($this->con, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+
+    public function getNewData(){
+        $sql = "SELECT * FROM $this->tablename order by date_added DESC";
 
         $result = mysqli_query($this->con, $sql);
 

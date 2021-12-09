@@ -1,13 +1,13 @@
 <?php
 
-function component($productname, $productprice, $productimg, $productid, $productcategory){
+function component($src, $productname, $productprice, $img, $productid){
     $element = "
 
     <div class=\"item-box\">
-                <form action=\"index.php\" method=\"post\">
+                <form action=\"$src\" method=\"post\">
                     <div class=\"card shadow\">
                         <div>
-                            <img src=\"$productimg\" alt=\"Zdjęcie\" class=\"img-fluid card-img-top\">
+                            <img src=\"$img\" alt=\"Zdjęcie\" class=\"img-fluid card-img-top\">
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">$productname</h5>
@@ -17,7 +17,7 @@ function component($productname, $productprice, $productimg, $productid, $produc
                                 <span class=\"price\">$productprice USD</span>
                             </h5>
                             <br>
-                            <button type=\"submit\" class=\"button\" name=\"add\">DODAJ <i class=\"fas fa-shopping-cart\"></i></button>
+                            <button type=\"submit\" class=\"button\" name=\"add\">DODAJ<i class=\"fas fa-shopping-cart\"></i></button>
                              <input type='hidden' name='product_id' value='$productid'>
                         </div>
                     </div>
@@ -27,31 +27,30 @@ function component($productname, $productprice, $productimg, $productid, $produc
     echo $element;
 }
 
-function cartElement($productname, $productprice, $productimg, $productid, $productcategory){
+function cartElement($productname, $productprice, $productimg, $productid){
     $element = "
 
-    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-items\">
+    <form action=\"cart.php?action=remove&id=$productid\" method=\"post\" class=\"cart-item\">
 
       <div class=\"row\">
 
-          <div class=\"divimg-productb\">
+          <div class=\"cproduct-img\">
               <img src=$productimg alt=\"Zdjęcie\" class=\"pimg\">
           </div>
 
-          <div class=\"text-productb\">
+          <div class=\"cproduct-txt\">
 
-              <small class=\"text-secondary\">$productcategory</small>
-
-              <div class=\"amount\">
-                <input type=\"text\" value=\"1\" class=\"amountform\">
+              <div class=\"cinfo\" id=\"cinfo\">
+                <h5 class=\"pt-2\">$productname</h5>
+                <small>$$productprice</small>
               </div>
-
-              <h5 class=\"pt-2\">$productprice PLN</h5>
-              <button type=\"submit\" class=\"Removebt\" name=\"remove\">Remove</button>
+              <div class=\"cinfo\" id=\"amount\">
+                <input type=\"text\" value=\"1\" class=\"amountform\">
+                <button type=\"submit\" class=\"Removebt\" name=\"remove\">Remove</button>
+              </div>
           </div>
 
       </div>
-      <hr class=\"mid-item\">
     </form>
 
     ";
