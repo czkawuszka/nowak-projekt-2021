@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 	include("connection.php");
@@ -7,7 +7,7 @@ session_start();
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-	
+
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 
@@ -15,8 +15,7 @@ session_start();
 		{
 
 			//Zapisywanie da bazie danych
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+			$query = "insert into users (user_name,password) values ($user_name','$password')";
 
 			mysqli_query($con, $query);
 
@@ -24,7 +23,7 @@ session_start();
 			die;
 		}else
 		{
-			
+
 		}
 	}
 ?>
@@ -126,27 +125,27 @@ button:hover{
 	transform: translateY(-500px);
 }
 #chk:checked ~ .login label{
-	transform: scale(1);	
+	transform: scale(1);
 }
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
 
 	</style>
-	<div id="box" class="main">  	
+	<div id="box" class="main">
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
 				<form method="post">
 					<label for="chk" aria-hidden="true">Zaloguj się</label>
-					
+
 					<input type="text" name="user_name" placeholder="email">
 					<input type="password" name="password" placeholder="hasło">
 					<button type="submit" >Zaloguj</button>
 			</div>
 
 			<div class="login">
-	
+
 					<label a href="signup.php" for="chk" aria-hidden="true">Rejestracja</label>
 					<input input id="text" type="text" name="user_name" placeholder="email" >
 					<input id="text" type="password" name="password" placeholder="hasło" >

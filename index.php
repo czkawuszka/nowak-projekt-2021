@@ -6,38 +6,6 @@ require_once ('php/CreateDb.php');
 require_once ('./php/component.php');
 
 
-$database = new CreateDb("Productdb", "Producttb");
-
-if (isset($_POST['add'])){
-    if(isset($_SESSION['cart'])){
-
-        $item_array_id = array_column($_SESSION['cart'], "product_id");
-
-        if(in_array($_POST['product_id'], $item_array_id)){
-            echo "<script>window.location = 'index.php'</script>";
-        }else{
-
-            $count = count($_SESSION['cart']);
-            $item_array = array(
-                'product_id' => $_POST['product_id']
-            );
-
-            $_SESSION['cart'][$count] = $item_array;
-        }
-
-    }else{
-
-        $item_array = array(
-                'product_id' => $_POST['product_id']
-        );
-
-        // Create new session variable
-        $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
-    }
-}
-
-
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +14,6 @@ if (isset($_POST['add'])){
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping</title>
     <link rel="icon" href="icon.jpg">
@@ -57,28 +22,39 @@ if (isset($_POST['add'])){
 <body>
   <?php require_once ("php/header.php"); ?>
   <div class="main-txt">
-  	<h1><center>Switches</center></h1>
+  	<h1><center>Epic Switch Shop</center></h1>
   	<h6><center>Wybierz coś dla siebie</center></h6>
+    <hr class="divider">
   </div>
-  <div class="container">
-            <?php
-                $counter=0;
-                $result = $database->getData();
-                while ($row = mysqli_fetch_assoc($result)){
+  <div class="main_wrapper">
+    <!-- NEWLY ADDED -->
+    <?php
+      $database = new CreateDb("sklep_items", "items"); //wez najnowszy przedmiot i pobierz jego zdjecie
+      $result = $database->getNewData();
 
-                    if ($counter==4) {
-                      echo ("<br>");
-                      $counter=1;
-                    }
-                    else {
-                      $counter=$counter+1;
-                    }
-                    component($row['product_name'], $row['product_price'], $row['product_image'], $row['id'], $row['product_category']);
-                }
-            ?>
+      while ($row = mysqli_fetch_assoc($result)){
+        $added_img = $row['image_path'];
+        echo ("
+        <div id=\"category\">
+          <a href=\"new.php\"><img class=\"cat_img\" id=\"right_cat\" src=\"$added_img\"></a>
+          <div class=\"cat_txt\">
+            <h6 class=\"cat_txt\">Nowości</h6>
+          </div>
+        </div>");
+        break;
+      }
+    ?>
+    <!-- SWITCHES -->
+    <div id="category">
+      <a href="switch.php"><img class="cat_img" id="left_cat" src="./upload/switch/c3_tang.png"></a>
+      <div class="cat_txt">
+        <h6 class="cat_txt">Switche</h6>
+      </div>
+    </div>
+
   </div>
   <footer>
-    <p><p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
+    <p>&copy; 2021 Maciej Lebkowski, Jakub Wolny, Dawid Prusiecki 3ipG</p>
   </footer>
 </body>
 </html>
